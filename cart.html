@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Products - TIMETECHFUSION</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" herf="https//fonts.google.com/share?selection.family=Poppins:wght@100;200;300;400;500;600;700">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html"> <img src="logo.png" width="100px"></a>
+      </div>
+      <nav>
+          <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="https://wa.me/916291028659">Contact</a></li>
+              
+            
+            </ul>
+        </nav>
+     <a href="cart.html"> <img src="cart.png" width="30px" height="30px"></a>
+      <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+</div>
+
+<!---account page-->
+<div class="account-page">
+    <div class="container">
+     <div class="row">
+         <div class="col-2">
+             <img src="image1.jpeg" width="100%">
+         </div>
+         <div class="col-2">
+             <div class="form-container">
+<div class="form-btn">
+    <span onclick="login()">Order</span>
+    <hr id="Indicator">
+</div>
+<form id="LoginForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="7435647d-5bd7-4821-8430-c2e206123dce">
+    <input type="text" name="name" placeholder="Your Name" >
+    <input type="email" name="email" placeholder="Your Email ID">
+    <input type="text" name="name" placeholder="Your Phone Number">
+    <input type="message" name="message" placeholder="Provide Order Details">
+    <input type="text" name="name" placeholder="Quantity">
+    <input type="text" name="name" placeholder="Full Address">
+    <button type="submit" class="btn">SUBMIT</button> 
+</form>
+             </div>
+         </div>
+     </div>
+    </div>
+</div>
+    
+       
+<!--footer-->
+<div class="footer">
+    <div class="container">
+    <div class="row">
+        <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download App for android and ios mobile phone</p>
+            <div class="app-logo">
+                <img src="play-store.png">
+                <img src="app-store.png">
+            </div>
+        </div>
+        <div class="footer-col-1">
+            <img src="logo-white.png" width="300px">
+            <p>Our Purpose is to sustainably make the pleasure and benifits of accessaries.</p>
+        </div>
+        <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Coupons</li>
+                <li>Blog Post</li>
+                <li>Return Policy</li>
+                <li>Join Us</li>
+            </ul>
+        </div>
+        <div class="footer-col-4">
+            <h3>Follow Us</h3>
+            <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=61556848889895&mibextid=ZbWKwL">Facebook</li>
+                <li><a href="https://wa.me/6291028659">Whatsapp</li>
+                <li><a href="https://www.instagram.com/time.techfusion?utm_source=qr&igsh=MTl6cXN1YWZiaXVueQ==">Instagram</li>
+                <li><a href="https://youtube.com/@time.techfusion?si=5E1v20PSM5dYgjzX">YouTube</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+	<p class="copyright" ><a href="tel:+916291028659">PHONE: - 6291028659</p>
+	<p class="copyright" ><a href="mailto:time.techfusion@gmail.com">EMAIL: - time.techfusion@gmail.com</p>
+    <p class="copyright">Copyright 2024 - <b>TIMETECHFUSION</b> Creations</p>
+</div>
+</div>
+<!---Js for toggle menu-->
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle()
+    {
+        if( MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+<!---js for form-->
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator= document.getElementById("Indicator");
+   function Register(){
+       RegForm.style.transform= "translateX(0px)";
+       LoginForm.style.transform= "translateX(0px)";
+       Indicator.style.transform= "translateX(100px)";
+   }
+   function Login(){
+       RegForm.style.transform= "translateX(300px)";
+       LoginForm.style.transform= "translateX(300px)";
+       Indicator.style.transform= "translateX(0px)";
+       
+   }
+</script>
+
+</body>
+</html>
